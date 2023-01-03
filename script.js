@@ -36,9 +36,6 @@ planets.forEach(planet => {
         Math.floor(Math.random() * 255),
         Math.floor(Math.random() * 255)
     ].join(', ') + ')'
-
-    console.log(planetDiv.style.backgroundColor)
-    // '#' + (parseInt(planet.moons * Math.floor(Math.random() * 1000) + Math.floor(Math.random() * 5000) * 100 % 256, 16)).toString().padStart(6, '0')
     // 4. Finally append each div to the <section> in the HTML (presented below)
     document.querySelector('section').appendChild(planetDiv)
     // 5. Bonus: Do the same process to create the moons. 
@@ -48,5 +45,4 @@ planets.forEach(planet => {
         moonDiv.textContent = planet.moons > 1 ? planet.moons.toString() : ''
         planetDiv.appendChild(moonDiv)
     }
-    // document.querySelector('section').appendChild(moonDiv)
 })
